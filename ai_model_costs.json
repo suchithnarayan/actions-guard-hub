@@ -1,0 +1,99 @@
+{
+  "gemini": {
+    "models": {
+      "gemini-2.5-pro": {
+        "pricing_type": "tiered_by_total_tokens",
+        "tiers": [
+          {
+            "threshold": 200000,
+            "condition": "<=",
+            "input_cost_per_million": 1.25,
+            "output_cost_per_million": 10.00,
+            "context_cost_per_million": 0.31
+          },
+          {
+            "threshold": 200000,
+            "condition": ">",
+            "input_cost_per_million": 2.50,
+            "output_cost_per_million": 15.00,
+            "context_cost_per_million": 0.625
+          }
+        ]
+      },
+      "gemini-2.5-flash": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 0.30,
+        "output_cost_per_million": 2.50,
+        "context_cost_per_million": 0.075,
+        "notes": "Assumes text/image/video content. Audio would be different."
+      },
+      "gemini-2.5-flash-preview": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 0.30,
+        "output_cost_per_million": 2.50,
+        "context_cost_per_million": 0.075,
+        "notes": "Assumes text/image/video content. Audio would be different."
+      }
+    }
+  },
+  "openai": {
+    "models": {
+      "gpt-4o": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 2.50,
+        "output_cost_per_million": 10.00,
+        "notes": "GPT-4o - Latest multimodal flagship model"
+      },
+      "gpt-4o-mini": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 0.15,
+        "output_cost_per_million": 0.60,
+        "notes": "GPT-4o-mini - Affordable small model for fast, lightweight tasks"
+      },
+      "gpt-4-turbo": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 10.00,
+        "output_cost_per_million": 30.00,
+        "notes": "GPT-4 Turbo - Previous generation high-intelligence model"
+      },
+      "gpt-4": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 30.00,
+        "output_cost_per_million": 60.00,
+        "notes": "GPT-4 - Original GPT-4 model"
+      },
+      "gpt-3.5-turbo": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 0.50,
+        "output_cost_per_million": 1.50,
+        "notes": "GPT-3.5 Turbo - Fast, inexpensive model for simple tasks"
+      },
+      "o1-preview": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 15.00,
+        "output_cost_per_million": 60.00,
+        "notes": "o1-preview - Reasoning model for complex, multi-step problems"
+      },
+      "o1-mini": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 3.00,
+        "output_cost_per_million": 12.00,
+        "notes": "o1-mini - Faster and cheaper reasoning model"
+      }
+    }
+  },
+  "anthropic": {
+    "models": {
+      "claude-3-5-sonnet": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 3.00,
+        "output_cost_per_million": 15.00
+      },
+      "claude-3-haiku": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 0.25,
+        "output_cost_per_million": 1.25
+      }
+    }
+  }
+}

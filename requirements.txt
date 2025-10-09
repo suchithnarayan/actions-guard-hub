@@ -1,0 +1,81 @@
+# GitHub Actions Security Scanner - Dependencies
+# Complete dependency list for the security scanner
+
+# =============================================================================
+# CORE DEPENDENCIES (Required)
+# =============================================================================
+
+# HTTP requests and API communication
+requests==2.32.5
+
+# GitHub API authentication and JWT handling
+PyJWT==2.10.1
+cryptography==46.0.2
+
+# YAML processing for GitHub Actions
+PyYAML==6.0.3
+
+# Retry logic for API calls with exponential backoff
+backoff==2.2.1
+
+# JSON repair for malformed AI responses
+json-repair==0.52.0
+
+# Environment variable management
+python-dotenv==1.1.1
+
+# Progress bars for long-running operations
+tqdm==4.67.1
+
+# =============================================================================
+# LANGCHAIN AI MODEL INTEGRATIONS
+# =============================================================================
+
+# Core LangChain functionality (required for AI models)
+langchain-core==0.3.78
+
+# Google Gemini models (default AI provider)
+langchain-google-genai==2.1.12
+
+# OpenAI models (recommended for cost-effectiveness)
+langchain-openai==0.3.35
+
+# Anthropic Claude models (optional, high-quality alternative)
+langchain-anthropic==0.3.21
+
+# =============================================================================
+# UTILITY DEPENDENCIES (Optional but recommended)
+# =============================================================================
+
+# GitHub API library for utility scripts
+PyGithub==2.8.1
+
+# =============================================================================
+# DEVELOPMENT DEPENDENCIES (Optional)
+# =============================================================================
+# Uncomment for development setup
+
+# Testing framework
+# pytest>=7.4.0
+# pytest-cov>=4.1.0
+
+# Code formatting and linting
+# black>=23.0.0
+# isort>=5.12.0
+# flake8>=6.0.0
+# mypy>=1.5.0
+
+# =============================================================================
+# INSTALLATION NOTES
+# =============================================================================
+# 
+# Minimal installation (Gemini only):
+#   pip install -r requirements.txt --no-deps
+#   pip install requests PyJWT cryptography PyYAML backoff json-repair python-dotenv langchain-core langchain-google-genai
+#
+# Full installation (all AI providers):
+#   pip install -r requirements.txt
+#
+# Development installation:
+#   pip install -r requirements.txt
+#   pip install pytest pytest-cov black isort flake8 mypy

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>ActionsGuardHub - Secure GitHub Actions Scanner</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                    <path d="M12 8a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0V9a1 1 0 0 0-1-1z"/>
+                    <circle cx="12" cy="6" r="1"/>
+                </svg>
+                <h1 class="logo-text">ActionsGuardHub</h1>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Action Details</a></li>
+                    <li><a href="all-security.html" class="nav-link">Security Analysis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="content">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="search-input" id="action-search" placeholder="Search GitHub Actions..." aria-label="Search GitHub Actions">
+                <div class="search-suggestions" id="search-suggestions"></div>
+            </div>
+
+            <div id="metadata" class="section"></div>
+            <div id="security-issues" class="section"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center text-muted">
+                ActionsGuardHub - Secure GitHub Actions Scanner - Analyzing popular GitHub Actions for security vulnerabilities
+            </p>
+        </div>
+    </footer>
+    
+    <script src="js/all-repos.js"></script>
+    <!-- <script src="js/data-validator.js"></script> -->
+</body>
+</html>
