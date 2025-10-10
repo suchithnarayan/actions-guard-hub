@@ -39,7 +39,7 @@ The scanner follows a **modular, layered architecture** designed for maintainabi
 ## 📁 File Structure Overview
 
 ```
-ai-gha-scan/
+actions-guard-hub/
 ├── 🎯 Core Application Files
 │   ├── actionsguardhub.py     # Main CLI entry point
 │   ├── scanner_core.py             # Orchestration & workflow management

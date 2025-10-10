@@ -41,8 +41,8 @@ Understanding our modular architecture will help you contribute effectively:
 
 1. **Fork and Clone**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/ai-gha-scan.git
-   cd ai-gha-scan
+   git clone https://github.com/suchithnarayan/actions-guard-hub.git
+   cd actions-guard-hub
    ```
 
 2. **Set Up Virtual Environment**
