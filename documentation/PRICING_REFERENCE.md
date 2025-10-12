@@ -4,6 +4,65 @@ This document provides a quick reference for current AI model pricing configured
 
 > **Note**: All prices are per million tokens unless otherwise specified. The system automatically calculates costs based on the configuration in `ai_model_costs.json`.
 
+**Supported Pricing Types:**
+
+1. **Simple Pricing** (fixed rates):
+```json
+{
+  "provider": {
+    "models": {
+      "model-name": {
+        "pricing_type": "simple",
+        "input_cost_per_million": 1.25,
+        "output_cost_per_million": 10.00,
+        "context_cost_per_million": 0.31
+      }
+    }
+  }
+}
+```
+
+2. **Tiered Pricing** (rates change based on usage):
+```json
+{
+  "gemini": {
+    "models": {
+      "gemini-2.5-pro": {
+        "pricing_type": "tiered_by_total_tokens",
+        "tiers": [
+          {
+            "threshold": 200000,
+            "condition": "<=",
+            "input_cost_per_million": 1.25,
+            "output_cost_per_million": 10.00
+          },
+          {
+            "threshold": 200000,
+            "condition": ">",
+            "input_cost_per_million": 2.50,
+            "output_cost_per_million": 15.00
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+**Available Pricing Types:**
+- `simple`: Fixed cost per million tokens
+- `tiered_by_total_tokens`: Different rates based on total token count
+- `tiered_by_input_tokens`: Different rates based on input token count  
+- `tiered_by_output_tokens`: Different rates based on output token count
+
+**Adding New Models:** Just update the JSON file - no code changes required!
+
+> ⚠️ **Important**: Gemini pricing has increased significantly. For cost optimization:
+> - Use **Gemini 2.5 Flash** for most use cases (much cheaper)
+> - Monitor your usage costs carefully
+> - Consider OpenAI GPT-4o-mini for very cost-sensitive applications
+
+
 ## 🤖 OpenAI Models
 
 | Model | Input Cost | Output Cost | Use Case | Notes |
