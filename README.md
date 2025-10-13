@@ -6,6 +6,10 @@
 
 A comprehensive, **modular** security analysis tool for GitHub Actions that provides AI-powered analysis for malicious github actions, vulnerability detection, detailed reporting, and an intuitive web dashboard for results visualization.
 
+## 🖥️ Demo
+
+![ActionsGuardHub Demo](media/overview-AGH.gif)
+
 ## 🚀 Quick Start
 
 ### Prerequisites
